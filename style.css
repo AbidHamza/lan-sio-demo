@@ -1,0 +1,176 @@
+:root {
+  --fond: #ffffff;
+  --texte: #1b1f24;
+  --carte: #f1f3f5;
+  --accent: #e8590c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--fond);
+  color: var(--texte);
+  line-height: 1.5;
+}
+
+section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #111418;
+}
+
+.logo {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.burger {
+  display: none;
+}
+
+body.sombre {
+  --fond: #16191d;
+  --texte: #e9ecef;
+  --carte: #23272d;
+}
+
+.theme {
+  background: none;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.hero {
+  max-width: none;
+  text-align: center;
+  background: #111418;
+  color: #ffffff;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin: 0 0 10px;
+}
+
+.compteur {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.bouton {
+  display: inline-block;
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.carte {
+  background: var(--carte);
+  padding: 16px;
+}
+
+.carte h3 {
+  margin-top: 0;
+}
+
+.heure {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 360px;
+}
+
+input,
+select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.erreur {
+  color: #c92a2a;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: var(--carte);
+}
+
+@media (max-width: 700px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .compteur {
+    font-size: 22px;
+  }
+
+  .burger {
+    display: block;
+    background: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 6px 12px;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #23272d;
+    padding: 16px;
+  }
+
+  .menu.ouvert {
+    display: flex;
+  }
+}

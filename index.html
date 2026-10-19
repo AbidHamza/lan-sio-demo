@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LAN SIO 2026</title>
+  <meta name="description" content="Tournoi de jeux vidéo des BTS SIO, samedi 12 décembre 2026.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="entete">
+    <a class="logo" href="#accueil">LAN SIO</a>
+    <button id="burger" class="burger">Menu</button>
+    <nav id="menu" class="menu">
+      <a href="#programme">Programme</a>
+      <a href="#inscription">Inscription</a>
+      <a href="#infos">Infos</a>
+      <button id="theme" class="theme">Mode sombre</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <h1>LAN SIO 2026</h1>
+      <p>Samedi 12 décembre, de 10 h à 22 h. Quatre tournois, 48 places.</p>
+      <p id="compteur" class="compteur">Chargement du compte à rebours</p>
+      <a class="bouton" href="#inscription">Je m'inscris</a>
+    </section>
+
+    <section id="programme">
+      <h2>Programme</h2>
+      <div class="cartes">
+        <article class="carte">
+          <h3>Trackmania</h3>
+          <p class="heure">10 h 30</p>
+          <p>Contre la montre sur cinq circuits. Le meilleur temps gagne.</p>
+        </article>
+        <article class="carte">
+          <h3>Rocket League</h3>
+          <p class="heure">13 h 00</p>
+          <p>Équipes de deux, élimination directe.</p>
+        </article>
+        <article class="carte">
+          <h3>Mario Kart</h3>
+          <p class="heure">16 h 00</p>
+          <p>Quatre joueurs par course, points cumulés sur huit courses.</p>
+        </article>
+        <article class="carte">
+          <h3>Échecs blitz</h3>
+          <p class="heure">19 h 00</p>
+          <p>Parties de cinq minutes, tableau suisse en six rondes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="inscription">
+      <h2>Inscription</h2>
+      <p>Places restantes : <strong id="places">48</strong></p>
+      <form id="formulaire">
+        <label for="pseudo">Pseudo</label>
+        <input id="pseudo" type="text" maxlength="20">
+        <label for="jeu">Tournoi</label>
+        <select id="jeu">
+          <option value="">Choisis un tournoi</option>
+          <option>Trackmania</option>
+          <option>Rocket League</option>
+          <option>Mario Kart</option>
+          <option>Échecs blitz</option>
+        </select>
+        <button class="bouton" type="submit">Valider</button>
+        <p id="erreur" class="erreur"></p>
+      </form>
+      <h3>Inscrits</h3>
+      <ul id="liste"></ul>
+    </section>
+
+    <section id="infos">
+      <h2>Infos pratiques</h2>
+      <p>Salle B12, campus de Saint-Quentin-en-Yvelines. Apporte ton casque.</p>
+      <p>Entrée gratuite, boissons et pizzas à prix coûtant.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Site réalisé en BTS SIO. Hébergement : GitHub Pages (GitHub Inc., San Francisco).</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
